@@ -55,7 +55,7 @@ Example usage: --url https://wiki.confluence.io/display/WEB/Retro
 Copyright (c) 2021 sd1null in /home"""
     try:
         page_id = get_page_id(url)
-        url = 'https://wiki.tele2.ru/rest/api/content/' + page_id
+        url = 'https://wiki.confluence.io/rest/api/content/' + page_id
         resp = requests.get(auth=auth,url=url)
         key = resp.json()
         namespace = key['space']['name']
